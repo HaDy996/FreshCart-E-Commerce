@@ -3,13 +3,13 @@ import axios from 'axios';
 import ProductItem from '../../../Shared/ProductItem/ProductItem';
 import Loader from '../../../Shared/Loader/Loader';
 import { cartContext } from '../../../../context/cartContext';
-import { wishlistContext } from '../../../../context/WishlistContext';
+import { WishlistContext} from '../../../../context/WishlistContext';
 import { toast } from 'react-toastify';
 
 export default function RecentProducts() {
   let [products, setProducts] = useState([]);
   let { addToCart } = useContext(cartContext);
-  let { wishlist } = useContext(wishlistContext); //^Get wishlist from context
+  let { wishlist } = useContext(WishlistContext); //^Get wishlist from context
   const [loading, setLoading] = useState({}); //^track loading state for each product
 
   function getAllProducts() {

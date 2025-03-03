@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 import styles from './ProductItem.module.css';
 import { Link } from 'react-router-dom';
 import { SyncLoader } from 'react-spinners';
-import { wishlistContext } from '../../../context/WishlistContext';
+import { WishlistContext } from '../../../context/WishlistContext';
 import { motion } from 'framer-motion';
 
 export default function ProductItem(props) {
-  const { wishlist, addToWishlist } = useContext(wishlistContext);
+  const { wishlist, addToWishlist } = useContext(WishlistContext)
   const [isInWishlist, setIsInWishlist] = useState(false);
   let { imageCover, title, category, price, ratingsAverage, _id } = props.product;
   let { addProductToCart, isLoading } = props;

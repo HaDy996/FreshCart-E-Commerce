@@ -4,13 +4,13 @@ import logo from '../../assets/images/freshcart-logo.svg';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { tokenContext } from '../../context/tokenContext';
 import { cartContext } from '../../context/cartContext';
-import { wishlistContext } from '../../context/WishlistContext';
+import { WishlistContext} from '../../context/WishlistContext';
 
 export default function Navbar() {
   let { token, setToken } = useContext(tokenContext);
   let navigate = useNavigate();
   let { numOfCartItems } = useContext(cartContext);
-  let { numOfwishlistItems } = useContext(wishlistContext);
+  let { numOfwishlistItems } = useContext(WishlistContext)
 
   const [currentIcon, setCurrentIcon] = useState('fa-instagram'); //^ State for change social media icon
   const [isModalOpen, setIsModalOpen] = useState(false);

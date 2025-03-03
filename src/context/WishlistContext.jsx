@@ -77,8 +77,8 @@ export default function WishlistContextProvider({ children }) {
     }
 
 
-    return <wishlistContext.Provider value={{ wishlist, getUserWishlist, addToWishlist, removeFromWishlist, numOfwishlistItems, setNumOfwishlistItems, isLoading, isInWishlist, setIsInWishlist }}>
+    return <WishlistContext.Provider value={{ wishlist, getUserWishlist, addToWishlist, removeFromWishlist, numOfwishlistItems, setNumOfwishlistItems, isLoading, isInWishlist, setIsInWishlist }}>
         {children}
-    </wishlistContext.Provider>
+    </WishlistContext.Provider>
 }
 

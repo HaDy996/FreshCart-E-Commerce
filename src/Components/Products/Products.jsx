@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useMemo, useState, useRef } from 'react';
 import styles from './Products.module.css';
 import axios from 'axios';
 import Loader from '../Shared/Loader/Loader';
-import { wishlistContext } from '../../context/WishlistContext';
+import { WishlistContext} from '../../context/WishlistContext';
 import { Link } from 'react-router-dom';
 import { cartContext } from '../../context/cartContext';
 import { SyncLoader } from 'react-spinners';
@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 export default function Products() {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const { addToWishlist, wishlist } = useContext(wishlistContext);
+  const { addToWishlist, wishlist } = useContext(WishlistContext);
   const [btnLoading, setBtnLoading] = useState(false);
   const { addToCart } = useContext(cartContext);
   const [flyingHearts, setFlyingHearts] = useState([]);

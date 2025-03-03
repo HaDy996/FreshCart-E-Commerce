@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styles from './Wishlist.module.css'
-import { wishlistContext } from '../../context/WishlistContext';
+import { WishlistContext } from '../../context/WishlistContext';
 import Loader from '../Shared/Loader/Loader';
 import { SyncLoader } from 'react-spinners';
 import { cartContext } from '../../context/cartContext';
@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 
 export default function Wishlist() {
-  const { wishlist, getUserWishlist, removeFromWishlist, isLoading} = useContext(wishlistContext)
+  const { wishlist, getUserWishlist, removeFromWishlist, isLoading} = useContext(WishlistContext)
   const { addToCart } = useContext(cartContext)
   const [loadingRemove, setLoadingRemove] = useState({});//^ Loading state for remove button
   const [loadingCart, setLoadingCart] = useState({});//^ Loading state for adding to cart button
