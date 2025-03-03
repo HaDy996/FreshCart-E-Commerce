@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { SyncLoader } from 'react-spinners'
 import 'animate.css'
 import { toast } from 'react-toastify';
-import * as Yup from 'Yup'
+import * as Yup from 'yup'
 
 
 
