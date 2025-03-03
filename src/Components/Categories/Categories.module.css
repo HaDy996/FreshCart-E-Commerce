@@ -1,0 +1,20 @@
+.main {
+    color: #0aad0a; 
+  }
+  
+  .card {
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .categoryName {
+    transition: color 0.3s ease;
+  }
+  
+  .categoryName:hover {
+    color: #0aad0a;
+  }
