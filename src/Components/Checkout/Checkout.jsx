@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styles from './Checkout.module.css'
 import { useFormik } from 'formik';
-import * as Yup from 'Yup'
+import * as Yup from 'yup'
 import { SyncLoader } from 'react-spinners';
 import { cartContext } from '../../context/cartContext';
 
