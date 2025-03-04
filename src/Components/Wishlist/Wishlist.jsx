@@ -53,9 +53,7 @@ export default function Wishlist() {
         <Loader />
       </div>
     );
-  }
-
-  if (wishlist.length == 0) {
+  } else if (wishlist.length == 0) {
     return (
       <div className='text-center bg-main text-white font-mono rounded-2xl my-36 py-20'>
         <h1 className='text-5xl my-2'>
