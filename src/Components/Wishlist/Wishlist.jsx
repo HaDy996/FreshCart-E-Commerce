@@ -69,10 +69,10 @@ export default function Wishlist() {
         {wishlist.map((product) => (
           <div key={product.id} className="p-4 rounded-lg shadow-xl">
             <img src={product.imageCover} alt={product.title} className="w-full  object-fill rounded" />
-            <h3 className="text-lg font-semibold mt-2">
+            <h3 className="text-lg font-semibold mt-2 dark:text-white">
               {product.title ? product.title.split(" ").slice(0, 3).join(" ") : "No Title"}
             </h3>
-            <p className="text-gray-600 font-bold mt-2 text-lg">{product.price} <span className='text-main text-base'>EGP</span></p>
+            <p className="text-gray-600 font-bold mt-2 text-lg dark:text-white">{product.price} <span className='text-main text-base'>EGP</span></p>
             <div className='flex mt-3'>
               <button
                 onClick={() => removeItem(product.id)}
