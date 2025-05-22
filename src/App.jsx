@@ -24,7 +24,7 @@ import ForgotPassword from './Components/ForgotPassword/ForgotPassword'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import PaymentSuccess from './Components/PaymentSuccess/PaymentSuccess'
 import PaymentRedirect from './Components/PaymentRedirect/PaymentRedirect'
-import { DarkModeProvider } from './Context/DarkModeContext'
+import { DarkModeProvider } from './context/DarkModeContext'
 import DarkModeToggle from './Components/Shared/DarkModeToggle/DarkModeToggle'
 
 
