@@ -135,12 +135,12 @@ export default function ProductItem(props) {
         <Link to={`/productDetails/${_id}/${category?._id}`}>
           <img src={imageCover} alt={title} className='mb-3 w-full h-full object-cover' />
           <span className='text-main font-semibold'>{category?.name}</span>
-          <h2 className='mb-3 font-bold'>{title.split(" ").splice(0, 2).join(" ")}</h2>
+          <h2 className='mb-3 font-bold dark:text-white'>{title.split(" ").splice(0, 2).join(" ")}</h2>
           <div className="flex justify-between mb-4">
-            <p className='font-bold'>{price} EGP</p>
+            <p className='font-bold dark:text-white'>{price} EGP</p>
             <p>
               <i className='fa fa-star rating-color'></i>
-              {ratingsAverage}
+              <span className='dark:text-white'> {ratingsAverage}</span>
             </p>
           </div>
         </Link>

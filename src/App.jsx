@@ -22,6 +22,10 @@ import SelectedCategory from './Components/SelectedCategory/SelectedCategory'
 import SelectedBrand from './Components/SelectedBrand/SelectedBrand'
 import ForgotPassword from './Components/ForgotPassword/ForgotPassword'
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
+import PaymentSuccess from './Components/PaymentSuccess/PaymentSuccess'
+import PaymentRedirect from './Components/PaymentRedirect/PaymentRedirect'
+import { DarkModeProvider } from './Context/DarkModeContext'
+import DarkModeToggle from './Components/Shared/DarkModeToggle/DarkModeToggle'
 
 
 function App() {
@@ -116,18 +120,32 @@ function App() {
             </ProtectedRoutes>
         },
         {path:"/forgot-password", element: <ForgotPassword />},
-
+        {
+          path: "payment-success", element:
+            <ProtectedRoutes>
+              <PaymentSuccess />
+            </ProtectedRoutes>
+        },
+        {
+          path: "payment-success/allorders", element:
+            <ProtectedRoutes>
+              <PaymentRedirect />
+            </ProtectedRoutes>
+        },
         { path: "*", element: <NotFound /> }
       ]
     }
   ])
 
   return (
-    <>
-      <RouterProvider router={routes} />
-      <ToastContainer />
-      <ScrollToTop />
-    </>
+    <DarkModeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+        <RouterProvider router={routes} />
+        <ToastContainer />
+        <ScrollToTop />
+        <DarkModeToggle />
+      </div>
+    </DarkModeProvider>
   )
 }
 

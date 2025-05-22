@@ -62,7 +62,7 @@ export default function PopularCategories() {
       <Slider {...settings}>
         {catogories.map((catogory) => <div>
           <img src={catogory.image} alt={catogories?.title} className='categoryImage' />
-          <h4 className='text-center'>{catogory.name}</h4>
+          <h4 className='text-center dark:text-white'>{catogory.name}</h4>
         </div>)}
       </Slider>
     </div>

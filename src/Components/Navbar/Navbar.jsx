@@ -62,7 +62,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to={''} className="flex items-center space-x-0 rtl:space-x-reverse mr-[-5px]">
-              <img src={logo} width={'180px'} alt="Fresh Cart Logo" />
+              <img src={logo} width={'180px'} alt="Fresh Cart Logo" className="dark:invert" />
             </Link>
           </div>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
                   My Orders
                 </NavLink>
                 <NavLink to={'cart'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main flex items-center justify-center">
-                  <i id="cart-icon" className={`fa-cart-shopping fa-solid fa-xl me-1 ${numOfCartItems > 0 && 'fa-cart-arrow-down text-main'}`}></i>
+                  <i id="cart-icon" className={`fa-cart-shopping fa-solid fa-xl me-1 dark:text-white ${numOfCartItems > 0 && 'fa-cart-arrow-down text-main'}`}></i>
                   Cart
                   {numOfCartItems > 0 && (
                     <span className="ml-2 border-x-[3px] px-[5px] rounded-md text-main text-xl border-main font-mono">
@@ -95,7 +95,7 @@ export default function Navbar() {
                   )}
                 </NavLink>
                 <NavLink to={'wishlist'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main flex items-center justify-center">
-                  <i id="wishlist-tab" className={`fa-heart fa-lg me-1 ${numOfwishlistItems > 0 ? 'fa-solid text-red-500' : 'fa-solid'}`}></i>
+                  <i id="wishlist-tab" className={`fa-heart fa-lg me-1 dark:text-white ${numOfwishlistItems > 0 ? 'fa-solid text-red-500' : 'fa-solid'}`}></i>
                   Wishlist
                   {numOfwishlistItems > 0 && (
                     <span className="ml-2 border-x-[3px] px-[5px] rounded-md text-main text-xl border-main font-mono">
@@ -127,17 +127,17 @@ export default function Navbar() {
               <ul className="login flex gap-3 border-x-[3.5px] px-3 border-main rounded-md">
                 {token ? (
                   <li className="">
-                    <span className="cursor-pointer" onClick={logOut}>
+                    <span className="cursor-pointer dark:text-white hover:text-main dark:hover:text-main" onClick={logOut}>
                       Sign Out
                     </span>
                   </li>
                 ) : (
                   <>
                     <li>
-                      <NavLink to={'login'}>Login</NavLink>
+                      <NavLink to={'login'} className="dark:text-white hover:text-main dark:hover:text-main">Login</NavLink>
                     </li>
                     <li>
-                      <NavLink to={'register'}>Register</NavLink>
+                      <NavLink to={'register'} className="dark:text-white hover:text-main dark:hover:text-main">Register</NavLink>
                     </li>
                   </>
                 )}
@@ -162,9 +162,9 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={toggleMobileMenu}>
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden " onClick={toggleMobileMenu}>
             <div className="absolute inset-0 flex items-center justify-center backdrop-blur-md">
-              <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-sm sm:max-w-md h-4/4 ">
+              <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-sm sm:max-w-md h-4/4 dark:bg-gray-900">
                 <ul className="flex flex-col items-center space-y-6">
                   <li>
                     <NavLink to={''} className="block py-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">

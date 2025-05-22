@@ -38,9 +38,6 @@ export default function Brands() {
 
   
 
-
-
-
   if(loading) {
     return <Loader />
   };
@@ -52,8 +49,8 @@ export default function Brands() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-6'>
           {allBrands.map((brand) => (
             <div
-              key={brand._id} //unique key for each brand
-              className='p-4 rounded-lg shadow-xl bg-white hover:shadow-[0_0_30px_rgba(10,173,10,0.3)] hover:border-x-[4px] hover:border-main transition-all duration-300 transform hover:-translate-y-2 cursor-pointer'
+              key={brand._id}
+              className='p-4 rounded-lg shadow-xl bg-white dark:bg-gray-800 hover:shadow-[0_0_30px_rgba(10,173,10,0.3)] hover:border-x-[4px] hover:border-main transition-all duration-300 transform hover:-translate-y-2 cursor-pointer'
               onClick={() => handleBrandClick(brand._id)}
             >
               <img
@@ -61,7 +58,7 @@ export default function Brands() {
                 src={brand.image}
                 alt={brand.name}
               />
-              <h3 className='text-center text-lg font-semibold mt-4 text-gray-800 hover:text-main transition-colors duration-300'>
+              <h3 className='text-center text-lg font-semibold mt-4 text-gray-800 dark:text-gray-200 hover:text-main dark:hover:text-main transition-colors duration-300'>
                 {brand.name}
               </h3>
             </div>

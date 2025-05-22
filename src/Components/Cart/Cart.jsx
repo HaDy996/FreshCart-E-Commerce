@@ -81,7 +81,7 @@ export default function Cart() {
       <div className="py-7">
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-lg text-white text-center uppercase bg-main dark:bg-main dark:text-gray-400">
+            <thead className="text-lg text-white text-center uppercase bg-main dark:bg-main dark:text-white">
               <tr>
                 <th scope="col" className="px-16 py-3">
                   <span className="sr-only">Image</span>
@@ -105,7 +105,7 @@ export default function Cart() {
                   <td className="px-6 py-4 text-center">
                     <div className="flex items-center justify-center space-x-3">
                       <button
-                        className="flex items-center justify-center h-6 w-6 text-white bg-main border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                        className="flex items-center justify-center h-6 w-6 text-white bg-main border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                         onClick={() => updateItems(product.product._id, product.count - 1)}
                       >
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
@@ -113,10 +113,10 @@ export default function Cart() {
                         </svg>
                       </button>
 
-                      <span className="text-xl font-semibold w-4 text-center">{product.count}</span>
+                      <span className="text-xl font-semibold w-4 text-center dark:text-white">{product.count}</span>
 
                       <button
-                        className="flex items-center justify-center h-6 w-6 text-white bg-main border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                        className="flex items-center justify-center h-6 w-6 text-white bg-main border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                         onClick={() => updateItems(product.product._id, product.count + 1)}
                       >
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -162,11 +162,11 @@ export default function Cart() {
       </div>
 
       <div className="flex my-5 justify-between items-center">
-        <h2 className="text-2xl font-extrabold">
-          Total Products Count : <span className="text-5xl text-main border-x-[4px] border-main rounded-lg px-3 ms-3 font-mono">{numOfCartItems}</span>
+        <h2 className="text-2xl font-extrabold dark:text-white">
+          Total Products Count : <span className="text-5xl text-main border-x-[4px] border-main rounded-lg px-3 ms-3 font-mono dark:text-white">{numOfCartItems}</span>
         </h2>
-        <h2 className="text-2xl font-extrabold ">
-          Total Price : <span className="text-5xl me-2 rounded-lg px-3 font-mono border-x-[4px] border-main">{cartDetails.data?.totalCartPrice || 0}</span> <span className='text-main'>EGP</span>
+        <h2 className="text-2xl font-extrabold dark:text-white">
+          Total Price : <span className="text-5xl me-2 rounded-lg px-3 font-mono border-x-[4px] border-main dark:text-white">{cartDetails.data?.totalCartPrice || 0}</span> <span className='text-main'>EGP</span>
         </h2>
 
 

@@ -94,11 +94,26 @@ export default function CartContextProvider({ children }) {
 
     }
     async function onlinePayment(shippingAddress) {
-        const { data } = await axios.post(`${ORDER_API_URL}/checkout-session/${cartId}?url=http://localhost:5174`, { shippingAddress }, {
-            headers
-        })
-        return data
+        // Get the current domain (works for both local and Vercel deployment)
+        const baseUrl = window.location.origin;
 
+        // For hash router, we need to include the hash in the URL
+        // This ensures the router correctly processes the route
+        const successUrl = `${baseUrl}/#/payment-success`;
+
+        console.log('Redirect URL being sent to Stripe:', successUrl);
+
+        try {
+            const { data } = await axios.post(
+                `${ORDER_API_URL}/checkout-session/${cartId}?url=${encodeURIComponent(successUrl)}`,
+                { shippingAddress },
+                { headers }
+            );
+            return data;
+        } catch (error) {
+            console.error('Error creating checkout session:', error);
+            throw error;
+        }
     }
     //* Orders_API & Logic:
     async function getUserOrders(id) {

@@ -178,12 +178,12 @@ export default function Products() {
                     className='mb-3 '
                   />
                   <span className='text-main font-semibold'>{product.category?.name}</span>
-                  <h2 className='mb-3 font-bold'>{product.title.split(" ").slice(0, 2).join(" ")}</h2>
+                  <h2 className='mb-3 font-bold dark:text-white'>{product.title.split(" ").slice(0, 2).join(" ")}</h2>
                   <div className="flex justify-between mb-4">
-                    <p className='font-bold'>{product.price} EGP</p>
+                    <p className='font-bold dark:text-white'>{product.price} EGP</p>
                     <p>
-                      <i className='fa fa-star text-yellow-400'></i>
-                      {product.ratingsAverage}
+                      <i className='fa fa-star text-yellow-400 '></i>
+                      <span className='dark:text-white'> {product.ratingsAverage}</span>
                     </p>
                   </div>
                 </Link>
