@@ -73,19 +73,19 @@ export default function Navbar() {
                 <NavLink to={''} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">
                   Home
                 </NavLink>
-                <NavLink to={'products'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main">
+                <NavLink to={'products'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">
                   Products
                 </NavLink>
-                <NavLink to={'categories'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main">
+                <NavLink to={'categories'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">
                   Categories
                 </NavLink>
-                <NavLink to={'brands'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main">
+                <NavLink to={'brands'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">
                   Brands
                 </NavLink>
-                <NavLink to={'allorders'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main">
+                <NavLink to={'allorders'} className="block py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white">
                   My Orders
                 </NavLink>
-                <NavLink to={'cart'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main flex items-center justify-center">
+                <NavLink to={'cart'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white flex items-center justify-center">
                   <i id="cart-icon" className={`fa-cart-shopping fa-solid fa-xl me-1 dark:text-white ${numOfCartItems > 0 && 'fa-cart-arrow-down text-main'}`}></i>
                   Cart
                   {numOfCartItems > 0 && (
@@ -94,7 +94,7 @@ export default function Navbar() {
                     </span>
                   )}
                 </NavLink>
-                <NavLink to={'wishlist'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-main flex items-center justify-center">
+                <NavLink to={'wishlist'} className=" py-1 px-2 text-gray-900 rounded-sm dark:text-white hover:text-main dark:hover:text-white flex items-center justify-center">
                   <i id="wishlist-tab" className={`fa-heart fa-lg me-1 dark:text-white ${numOfwishlistItems > 0 ? 'fa-solid text-red-500' : 'fa-solid'}`}></i>
                   Wishlist
                   {numOfwishlistItems > 0 && (
